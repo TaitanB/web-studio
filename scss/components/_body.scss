@@ -1,0 +1,15 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color-theme-light);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+// переробити в міксін???
+
+// @mixin font ($fs, $lh, $fw, $ls) {
+//     font-size: $fs + px;
+//     line-height: $lh / $fs;
+//     font-weight: $fw;
+//     letter-spacing: $ls + em;
+// }

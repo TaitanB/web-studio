@@ -1,0 +1,40 @@
+.services {
+  padding-top: 0;
+  display: none;
+
+  &__item {
+    position: relative;
+  }
+
+  // &__item > img {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   object-fit: cover;
+  // }
+
+  &__description {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    font-weight: 700;
+    line-height: 1.143;
+    text-transform: uppercase;
+    color: var(--text-color-theme-dark);
+    background-color: #2f303a;
+    opacity: 80%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  @include desktop {
+    display: block;
+    &__list {
+      display: flex;
+      gap: 30px;
+    }
+  }
+}

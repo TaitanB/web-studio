@@ -1,0 +1,121 @@
+.header {
+  background: var(--text-color-theme-dark);
+  border-bottom: 1px solid #ececec;
+
+  &__list {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    @include desktop {
+      flex-direction: row;
+      margin-left: auto;
+      gap: 30px;
+      width: 352px;
+      align-items: center;
+    }
+  }
+
+  &__link--top {
+    padding-top: 18px;
+  }
+
+  &__link--bottom {
+    padding-bottom: 18px;
+  }
+
+  &__link {
+    font-weight: 500;
+    line-height: 1.143;
+    letter-spacing: 0.02em;
+    color: var(--text-color-theme-light);
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus,
+    &:hover {
+      color: var(--accent-color);
+    }
+
+    display: flex;
+    align-items: center;
+
+    @include desktop {
+      padding: 32px 0;
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+}
+
+.nav {
+  &__logo {
+    @extend .logo;
+    color: var(--logo-color);
+    padding: 24px 0;
+
+    @include tablet {
+      font-size: 24px;
+      line-height: 1.167;
+    }
+
+    @include desktop {
+      font-size: 26px;
+    }
+  }
+
+  &__list {
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+  }
+
+  &__link {
+    font-weight: 500;
+    line-height: 1.143;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+    padding: 32px 0;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    &:focus,
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+}
+
+.header__wraper {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .nav,
+    & .nav__list {
+      display: flex;
+      align-items: center;
+    }
+
+    & .nav__list {
+      margin-left: 87px;
+    }
+  }
+
+  @include desktop {
+    & .nav__list {
+      margin-left: 92px;
+    }
+  }
+}
